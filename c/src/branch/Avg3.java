@@ -22,13 +22,14 @@ public class Avg3 {
 	 * 60이상이면 D
 	 * 50이상이면 E
 	 * 50미만이면 F 
+	 * 단 switch-case문으로 해결하세요
 	 * 	 */
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 
-		String name = "";
+		String name = "", score = "";
 		int kor = 0, eng = 0, meth = 0, total = 0, avg = 0;
-		System.out.println("이름");
+				System.out.println("이름");
 		name = scanner.next();
 		System.out.println("국어");
 		kor = scanner.nextInt();
@@ -38,30 +39,31 @@ public class Avg3 {
 		meth = scanner.nextInt();
 			total = kor + eng + meth;
 		avg = total / 3;
-
 		
-		 if (avg>101) {
-				System.out.println("100까지만 입력해주세요");
-					return;
-				}
-		 else if (avg>90) {
-		System.out.println("A");
+		
+		
+		switch (avg/10) {
+		case 9 : score = "a"; 
+				break;
+		case 8 : score = "b"; 
+		break;
+		case 7 : score = "c"; 
+		break;
+		case 6 : score = "D"; 
+		break;
+		case 5 : score = "e"; 
+		break;
+		case 4 : score = "f"; 
+		break;
+		
+		
+		default: score = "f";
+		return;
 			
-		}else if (avg>80) {
-			System.out.println("B");
-		}else if (avg>70) {
-				System.out.println("C");
-		}		else if(avg>60) {
-					System.out.println("D");
-		}			else if (avg>50) {
-						System.out.println("E");
-		}else  {
-							System.out.println("F");
-						}
+		}
 		
-		
-		
-		
+System.out.println(score);
+
 		
 		
 

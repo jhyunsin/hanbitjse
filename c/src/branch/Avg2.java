@@ -62,6 +62,5 @@ public class Avg2 {
 			hj = "F";
 
 		}
-System.out.println(hj);
 	}
 }
