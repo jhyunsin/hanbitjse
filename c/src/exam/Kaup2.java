@@ -49,5 +49,8 @@ public class Kaup2 {
 
 		System.out.println(name + "은 bmi 지수는 " + d + "이고, " + result + "이다");
 
+System.out.printf("%s은 bmi지수는 %.2f이고 %s이다",name,d,result); 		
+		
+		
 	}
 }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * @date   :2016. 6. 9. 
- * @author :pakjkwan@gmail.com
+ * @author :신재현
  * @file   :MonthEnd.java
  * @story  :
 */
@@ -27,32 +27,39 @@ public class MonthEnd2 {
 	public static void main(String[] args) {
 		// --------init---------
 		Scanner scanner = new Scanner(System.in);
-		int malil=0;
-		//---------op --------
-		System.out.println("년 입력?(예)2016");
-		int year=2016;
-		System.out.println("월 입력?(예)2");
-		int month = ;
-		
-		
-		switch (scanner.nextInt()) {
-		case 1:case 3:case 5:case 7:case 8:case 10:case 12:
-			malil = 31;
-			break;
-		case 2:
-			if(year%4==0||year%100!=0||year%400==0){ 
-				malil = 29;
-			}else{
-				malil = 28;
-			}
-			break;
-		case 4:case 6:case 9:case 11:
-			malil = 30;
-			break;
-		default:System.out.println("잘못 입력 되었습니다");
-			return;
-		}
-		System.out.println(year+"년"+month+"월"+malil+"일");
+		int year =0,month =0, endDay =0;
+	     System.out.println( "년도");
+	     year=scanner.nextInt();
+	     System.out.println( "월");
+	     month=scanner.nextInt();
+	     
+	     switch ( month) {
+	     case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+	            endDay = 31;
+	            break;
+	     case 4:case 6:case 9:case 11:
+	            endDay = 30;
+	            break;
+	     case 2:///혹은 year%4==0|| year%400==0 && year%100 !=0 ? 29 : 28;
+	            
+	            //// (year%4==0 && year%100!=0 || year%400 ==0)?:; 삼항연산자
+	            
+	    	 endDay = (year%4==0 && year%100!=0 || year%400 ==0)? 29:28;
+	         /// 변수를 뒤로 뺀다 왜냐면 스코프가 아니기 때문에
+	    	 /// 원블락으로 처리 하는 것에 우선순위를 두라
+	    	 
+	    	 break;
+	           
+	           
+
+	     default:
+	           System. out.println( "잘못입력하셨습니다" );
+	     return;
+	     }
+	     
+	     System.out.println(year+"은 "+month+"월 "+endDay+"일");
+	     System.out.printf( "%d%s%d%s%d%s",year,"년",month,"월",endDay,"일");
+
 	}
 
 }

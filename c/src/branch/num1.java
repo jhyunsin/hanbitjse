@@ -28,26 +28,53 @@ public class num1 {
  * 3등 홍길동 49점**/
 public static void main(String[] args) {
 	Scanner scanner = new Scanner(System.in);
-	int score1=0, score2=0, score3=0;
-	String name1, name2, name3;
-	
-	System.out.println("1번학생");
-	name1= scanner.next();
-	System.out.println("2번학생");
-	name2= scanner.next();
-	System.out.println("3번학생");
-	name3= scanner.next();
-	
-	
-			
-			
-	
-	
-	
-	
-	
+	int score1 =0, score2 =0, score3 =0;
+    String name1, name2, name3;
+    
+    System.out.println( "1번학생");
+    name1= scanner.next();
+    System.out.println( "1번학생 점수는?" );
+    score1=scanner.nextInt();
+    System.out.println( "2번학생");
+           name2= scanner.next();
+          System. out.println( "2번학생 점수는?" );
+           score2= scanner.nextInt();
+          System. out.println( "3번학생");
+    name3= scanner.next();
+    System.out.println( "3번학생 점수는?" );
+    score3=scanner.nextInt();
+    
+if (score1 >score2 && score1 >score3 && score2 >score3 ) {
+    System.out.println( "1등 "+ name1+ " 점수는 "+score1 +"점" );
+    System.out.println( "2등 "+ name2+ " 점수는 "+score2 +"점" );
+    System.out.println( "3등 "+ name3+ " 점수는 "+score3 +"점" );
+} else if (score1 >score2 && score1 >score3 &&score3 >score2 ){
+    System.out.println( "1등 "+ name1+ " 점수는 "+score1 +"점" );
+    System.out.println( "2등 "+ name3+ " 점수는 "+score3 +"점" );
+    System.out.println( "3등 "+ name2+ " 점수는 "+score2 +"점" );
+}  else if (score2 >score1 && score2 >score3 &&score1 >score3 ){
+    System.out.println( "1등 "+ name2+ " 점수는 "+score2 +"점" );
+    System.out.println( "2등 "+ name1+ " 점수는 "+score1 +"점" );
+    System.out.println( "3등 "+ name3+ " 점수는 "+score3 +"점" );
+}else if (score2 >score1 && score2 >score3 &&score3 >score1 ){
+    System.out.println( "1등 "+ name2+ " 점수는 "+score2 +"점" );
+    System.out.println( "2등 "+ name3+ " 점수는 "+score3 +"점" );
+    System.out.println( "3등 "+ name1+ " 점수는 "+score1 +"점" );
+}else if (score3 >score1 && score3 >score2 &&score1 >score2 ){
+    System.out.println( "1등 "+ name3+ " 점수는 "+score3 +"점" );
+    System.out.println( "2등 "+ name1+ " 점수는 "+score1 +"점" );
+    System.out.println( "3등 "+ name2+ " 점수는 "+score2 +"점" );
+}else if (score3 >score1 && score3 >score2 &&score2 >score1 ){
+    System.out.println( "1등 "+ name3+ " 점수는 "+score3 +"점" );
+    System.out.println( "2등 "+ name2+ " 점수는 "+score2 +"점" );
+    System.out.println( "3등 "+ name1+ " 점수는 "+score1 +"점" );
 }
+
+
+
+
+}}
 	
 	
 
-}
+
