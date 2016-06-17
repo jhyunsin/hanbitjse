@@ -40,7 +40,7 @@ name = scanner.next();
 ssn = scanner.next();
 char c = ssn.charAt(7);
 		if (c=='0'||c=='9') {
-			System.out.println("ssn에는 0,9 없습니다");
+			System.out.println("ssn에는 0,9 없습니다..");
 			return;			
 		}
 		

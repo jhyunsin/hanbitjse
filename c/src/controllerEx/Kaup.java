@@ -1,7 +1,7 @@
 /**
  * 
  */
-package controller;
+package controllerEx;
 
 import java.util.Scanner;
 

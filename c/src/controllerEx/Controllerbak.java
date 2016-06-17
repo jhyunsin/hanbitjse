@@ -1,7 +1,7 @@
 /**
  * 
  */
-package controller;
+package controllerEx;
 
 import java.util.Scanner;
 
@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  * @file : Controller.java
  * @story :
  */
-public class Controller {
+public class Controllerbak {
 	public static void main(String[] args) {
 		String menu = "";
 
